@@ -8,10 +8,6 @@
     "postinstall": "cd app && npm install",
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://git.heroku.com/warm-castle-64604.git"
-  },
   "author": "Bogdan Vlad",
   "license": "ISC",
   "dependencies": {
