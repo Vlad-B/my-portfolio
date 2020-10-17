@@ -6,15 +6,15 @@ app.set('view engine', 'ejs');
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (res) => {
+app.get('/', (req, res) => {
 	res.render('home');
 });
 
-app.get('/about', (res) => {
+app.get('/about', (req, res) => {
 	res.render('about');
 });
 
-app.get('/contact', (res) => {
+app.get('/contact', (req, res) => {
 	res.render('contact');
 });
 
