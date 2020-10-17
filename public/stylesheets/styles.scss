@@ -3,13 +3,16 @@
 * {
 	box-sizing: border-box;
 }
+:root {
+	--mainColor: #ff000085;
+  }
 
 body {
 	margin: 0;
 	height: 100%;
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
-	letter-spacing: .05em;
+	letter-spacing: .02em;
 	background: #15121f;
 	// position: relative;
 }
@@ -25,11 +28,16 @@ ul {
 	padding: 0;
 }
 
-.cover-wrapper {
-	min-width: 300px;
+.wrapper {
 	height: 100%;
-	margin-bottom: 4em;;
+	padding: 1.5em 2em;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.wrapper {
 	header {
+		// margin-bottom: 2em;
 		display: flex;
 		justify-content: space-between;
 		letter-spacing: .05em;
@@ -66,7 +74,7 @@ ul {
 				padding: 0 .3em;
 				display: inline-block;
 				color: #fff;
-				font-size: 1em;
+				font-size: 1.1em;
 				text-decoration: none;
 				font-weight: bold;
 				transition: transform 0.5s ease;
@@ -92,37 +100,33 @@ ul {
 		}
 	}
 
-	.human {
-		margin: 4em auto 2em;
-		text-align: center;
-
-		img {
-			width: 6.25em;
-			height: 6.25em;
-			border-radius: 100%;
-			transition: all .5s;
+		.human {
+			margin: 3em auto;
+			height: 100%;
+			text-align: center;
+	
+			img {
+				width: 7em;
+				height: 7em;
+				border-radius: 100%;
+				transition: all .5s;
+			}
+			img:hover {
+				transform: scale(1.2) rotate(5deg);
+			}
+			p {
+				margin: 1em auto 0;
+				max-width: 25em;
+				font-size: 1.4em;
+			}
 		}
-		img:hover {
-			transform: scale(1.2) rotate(5deg);
-		}
-		p {
-			margin: 2em auto 0;
-			max-width: 25em;
-			font-size: 1.2em;
-		}
-	}
+	
 
 	.wrapper {
 		padding-bottom: 0;
 	}
 }
 
-.wrapper {
-	height: 100%;
-	padding: 1.5em 2em;
-	max-width: 1400px;
-	margin: 0 auto;
-}
 
 .portfolio-section {
 	h1 {
@@ -139,29 +143,51 @@ ul {
 		}
 
 .items {
-	// max-width: 1200px;
+	height: 100%;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	grid-template-columns: repeat(1, 2fr);
 	gap: 2em 1.5em;
+
+	a {
+		height: 100%;
+		font-weight: bold;
+		font-size: 1.2em;
+		padding-bottom: 5px;
+		background:
+			linear-gradient(
+			to right,
+			var(--mainColor) 0%,
+			var(--mainColor) 5px,
+			transparent 5px
+			);
+		background-repeat: repeat-x;
+		background-size: 100%;
+		color: #fff;
+		padding-left: 10px;
+		text-decoration: none;
+	}
+
+
+	a:hover {
+		background-size: 4px 90px;
+	}
 
 	li{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		justify-content: space-between;
-		height: auto;
+		align-content: space-between;
+		height: 45em;
 		width: 100%;
-		// min-width: 25em;
 		margin: 0 auto;
 		padding: 1em .5em 0;
-		// border: 10px solid #1b1729;
 		border: 10px solid #29233f;
 		border-radius: 20px;
 
 		.intro{
 			width: 95%;
-			height: auto;
-			margin: 1.5em auto;
+			height: 30em;
+			margin: 1em auto 0;
 
 			.projectImage{
 				display: block;
@@ -181,33 +207,36 @@ ul {
 			}
 			
 			p {
-				height: auto;
+				display: inline-block;
+				height: 4em;
 				width: 95%;
-				margin: 0 auto 1.5em;
+				margin: 0 auto;
+				font-size: 1.1em;
 			}
 		}
 
 		.icons-home {
 			width: 95%;
+			height: 7em;
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
 			margin: 0 auto 1em;
-			justify-self: baseline;
-			a {
-				font-weight: bold;
-				font-size: 1.2em;
-			}
+			align-items: center;
+			align-content: space-evenly;
 
 			span {
 				padding: 0 .5em;
 			}
 			.github {
+				height: 90%;
 				.fab {
-					font-size: 2em;
-					margin-bottom: .6em;
+					font-size: 1em;
 				}
 			}
-			.campground {
+			.link {
+				height: 90%;	
 				.fas {
-					font-size: 1.5em;
+					font-size: 1em;
 				}
 			}
 		}
@@ -215,7 +244,6 @@ ul {
 }
 
 .footer {
-	// margin-top: 2em;
 	p {
 		margin: 1em auto;
 	}
@@ -273,43 +301,76 @@ ul {
 	.find-me {
 		h1 {
 			margin-bottom: 0;
+			text-transform: capitalize;
 		}
 
-		text-transform: capitalize;
-		
 		.hr-red {
-			margin-bottom: 4em;
+			margin-bottom: 3em;
 		}
 	}
 	.icons-contact {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: center;
-		
-		i {
-			font-size: 3em;
+		height: 7.5em;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		align-content: space-between;
+		align-items: center;
+
+		a {
+			height: 100%;
+			width: 13em;
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			padding-bottom: 2px;
+			// padding-left: 5px;
+			border-bottom: 3px solid transparent;
+
+			background:
+				linear-gradient(
+				to right,
+				var(--mainColor) 0%,
+				var(--mainColor) 5px,
+				transparent 5px
+				);
+			background-repeat: repeat-x;
+			background-size: 100%;
+			color: #fff;
+			padding-left: 10px;
+			text-decoration: none;
+
+
+			i {
+				font-size: 2.5em;
+				margin: 0 .2em 0 0;
+			}
+
+			p {
+				display: inline-block;
+				font-size: 1.5em;
+				font-weight: bold;
+				margin: 0;
+			}
 		}
 
-		p {
-			font-size: 1.5em;
-			font-weight: bold;
-			margin-right: 2em;;
+		a:hover {
+			// border-bottom: 3px solid red;
+			background-size: 4px 90px;
 		}
 	}
 
 	h2 {
-		margin: 2em auto 2em;
+		margin: 1em auto 2em;
 		font-size: 2em;
 		text-align: center;
 	}
 
 	form {
-		max-width: 90%;
+		max-width: 95%;
 		margin: 0 auto;
 		fieldset {
-			padding: 2em 3em;
+			padding: 2em 1em;
 			border: 10px solid #29233f;
-			border-radius: 20px;
+			border-radius: 1.25em;
 		}
 
 		label, input, textarea {
@@ -361,9 +422,9 @@ ul {
 
 // SMALL DEVICES
 
-@media (min-width: 400px) {
+@media (min-width: 300px) {
 	body {
-		font-size: 15px;
+		font-size: 12px;
 	}
 }
 
@@ -377,6 +438,11 @@ ul {
 				.logo::before {
 					width: 140px;
 				}
+			}
+		}
+		.wrapper {
+			.icons-contact {
+				justify-content: center;
 			}
 		}
 	}
@@ -398,16 +464,33 @@ ul {
 			header {
 				font-size: 1.05em;
 			}
-	}	}
 
-}
+			form {
+				width: 90%;
+				fieldset {
+					padding: 2em;
+				}
+			}
+			
+			.human {
+				display: grid;
+				grid-template-columns: repeat(2, auto);
+				justify-content: space-around;
+				justify-items: center;
+
+				p {
+					width: 90%;
+				}
+			}
+		}	
+}}
 
 @media (min-width: 750px) {
 	body {
-		font-size: 19px;
+		// font-size: 19px;
 
 		.items {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 45%);
 			justify-content: space-between;
 		}
 
@@ -428,10 +511,6 @@ ul {
 
 @media (min-width: 1000px) {
 	body {
-		.items {
-			gap: 2% 5%;
-		}
-
 		.wrapper {
 			padding: 2em 5em;
 
@@ -445,7 +524,11 @@ ul {
 @media (min-width: 1100px) {
 	body {
 		.items {
-			grid-template-columns: repeat(3, 1fr) !important;
+			grid-template-columns: repeat(3, 1fr);
+			
+			li {
+				height: 40em;
+			}
 		}
 	}
 }
@@ -455,6 +538,10 @@ ul {
 		.wrapper {
 			max-width: 1800px;
 			padding: 2em 8em;
+
+			.human {
+				justify-content: space-evenly;
+			}
 		}
 	}
 }
