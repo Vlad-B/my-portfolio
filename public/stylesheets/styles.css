@@ -17,7 +17,10 @@ body {
   background: #15121f;
 }
 
-a, a:link, a:visited, a:active {
+a,
+a:link,
+a:visited,
+a:active {
   color: #fff;
   text-decoration: none;
 }
@@ -69,7 +72,8 @@ ul {
   display: flex;
 }
 
-.wrapper header ul li:hover, .wrapper header ul li:focus {
+.wrapper header ul li:hover,
+.wrapper header ul li:focus {
   outline: none;
 }
 
@@ -103,7 +107,8 @@ ul {
   transform: translate3d(0, 0, 0);
 }
 
-.wrapper header ul li:hover a, .wrapper header ul ul li:focus a {
+.wrapper header ul li:hover a,
+.wrapper header ul ul li:focus a {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
@@ -261,6 +266,7 @@ ul {
 
 .footer p {
   margin: 1em auto;
+  text-align: center;
 }
 
 .about-grid {
@@ -388,7 +394,9 @@ ul {
   border-radius: 1.25em;
 }
 
-.wrapper form label, .wrapper form input, .wrapper form textarea {
+.wrapper form label,
+.wrapper form input,
+.wrapper form textarea {
   font-family: inherit;
   font-size: 100%;
   font-weight: bold;
@@ -401,14 +409,17 @@ ul {
   margin: 0;
 }
 
-.wrapper form input, .wrapper form textarea {
+.wrapper form input,
+.wrapper form textarea {
   font-weight: normal;
   padding: 1em;
   color: black;
   letter-spacing: 2px;
 }
 
-.wrapper form #message, .wrapper form #email-address, .wrapper form #full-name {
+.wrapper form #message,
+.wrapper form #email-address,
+.wrapper form #full-name {
   margin-bottom: 50px;
 }
 

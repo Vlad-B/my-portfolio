@@ -1,6 +1,6 @@
 const express = require('express');
 const enforce = require('express-sslify');
-const app     = express();
+const app = express();
 
 app.set('view engine', 'ejs');
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
@@ -20,5 +20,5 @@ app.get('/contact', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-	console.log(`Express server is running on port ${ PORT }`);
+	console.log(`Express server is running on port ${PORT}`);
 });
