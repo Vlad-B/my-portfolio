@@ -8,6 +8,10 @@
   --mainColor: #ff000085;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   height: 100%;
@@ -190,7 +194,7 @@ ul {
       grid-template-columns: repeat(1, 1fr);
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  height: 45em;
+  height: 43em;
   width: 100%;
   margin: 0 auto;
   padding: 1em .5em 0;
@@ -223,7 +227,7 @@ ul {
 
 .items li .intro p {
   display: inline-block;
-  height: 4em;
+  height: 10%;
   width: 95%;
   margin: 0 auto;
   font-size: 1.1em;
@@ -249,11 +253,11 @@ ul {
 }
 
 .items li .icons-home .github {
-  height: 90%;
+  height: 40px;
 }
 
 .items li .icons-home .github .fab {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .items li .icons-home .link {
@@ -261,32 +265,29 @@ ul {
 }
 
 .items li .icons-home .link .fas {
-  font-size: 1em;
-}
-
-.footer p {
-  margin: 1em auto;
-  text-align: center;
-}
-
-.about-grid {
-  padding-bottom: 0;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  gap: 2em;
-}
-
-.about-grid h1 {
-  margin-bottom: 0;
-}
-
-.about-grid strong {
   font-size: 1.2em;
-  display: block;
-  margin-top: 2.2em;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+footer a {
+  font-size: 3.5em;
+  color: rgba(255, 0, 0, 0.377) !important;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+footer a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .skills {
@@ -494,8 +495,8 @@ ul {
 
 @media (min-width: 750px) {
   body .items {
-    -ms-grid-columns: (45%)[2];
-        grid-template-columns: repeat(2, 45%);
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -519,12 +520,15 @@ ul {
 }
 
 @media (min-width: 1100px) {
-  body .items {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
   body .items li {
     height: 40em;
+  }
+}
+
+@media (min-width: 1300px) {
+  body .items {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
   }
 }
 
