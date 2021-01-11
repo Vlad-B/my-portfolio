@@ -20,6 +20,67 @@ body {
 	background: #15121f;
 }
 
+#back-to-top {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 25px;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 0, 0, 0.377);
+	color: #15121f;
+	cursor: pointer;
+	outline: none;
+	border: 3px solid #333;
+	border-radius: 50%;
+	transition: 0.2s;
+	transition-timing-function: ease-in-out;
+	transition-property: background-color, color;
+}
+
+#back-to-top:hover,
+#back-to-top:focus {
+	background-color: #15121f;
+	color: rgba(255, 0, 0, 0.377);
+}
+
+/* Animations */
+.btnEntrance {
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+	animation-name: btnEntrance;
+}
+
+/* fadeInUp */
+@keyframes btnEntrance {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.btnExit {
+	animation-duration: 0.25s;
+	animation-fill-mode: both;
+	animation-name: btnExit;
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
 a,
 a:link,
 a:visited,
@@ -250,14 +311,15 @@ footer {
 	justify-content: space-between;
 	height: 100%;
 
-	a {
-		font-size: 3.5em;
-		color: rgba(255, 0, 0, 0.377) !important;
-		transition: all .5s;
-	}
-	a:hover {
-		transform: scale(1.2);
-	}
+	// Back to top button
+	// a {
+	// 	font-size: 3.5em;
+	// 	color: rgba(255, 0, 0, 0.377) !important;
+	// 	transition: all .5s;
+	// }
+	// a:hover {
+	// 	transform: scale(1.2);
+	// }
 }
 
 .skills {
@@ -416,7 +478,7 @@ footer {
 
 @media (min-width: 300px) {
 	body {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
@@ -433,6 +495,7 @@ footer {
 			}
 		}
 		.wrapper {
+			padding: 2em 3em;
 			.icons-contact {
 				justify-content: center;
 			}
@@ -440,13 +503,13 @@ footer {
 	}
 }
 
-@media (min-width: 550px) {
-	body {
-		.wrapper {
-			padding: 2em 3em;
-		}
-	}
-}
+// @media (min-width: 550px) {
+// 	body {
+// 		.wrapper {
+// 			padding: 2em 3em;
+// 		}
+// 	}
+// }
 
 @media (min-width: 600px) {
 	body {
@@ -509,6 +572,12 @@ footer {
 			header {
 				font-size: 1.3em;
 			}
+		}
+
+		#back-to-top {
+			font-size: 40px;
+			width: 70px;
+			height: 70px;
 		}
 	}
 }

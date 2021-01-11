@@ -21,6 +21,101 @@ body {
   background: #15121f;
 }
 
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.377);
+  color: #15121f;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #333;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+}
+
+#back-to-top:hover,
+#back-to-top:focus {
+  background-color: #15121f;
+  color: rgba(255, 0, 0, 0.377);
+}
+
+/* Animations */
+.btnEntrance {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: btnEntrance;
+          animation-name: btnEntrance;
+}
+
+/* fadeInUp */
+@-webkit-keyframes btnEntrance {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: btnExit;
+          animation-name: btnExit;
+}
+
+/* fadeOutDown */
+@-webkit-keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+}
+
 a,
 a:link,
 a:visited,
@@ -278,18 +373,6 @@ footer {
   height: 100%;
 }
 
-footer a {
-  font-size: 3.5em;
-  color: rgba(255, 0, 0, 0.377) !important;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-footer a:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .skills {
   height: 100%;
 }
@@ -442,7 +525,7 @@ footer a:hover {
 
 @media (min-width: 300px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -453,16 +536,13 @@ footer a:hover {
   body .cover-wrapper header .logo::before {
     width: 140px;
   }
+  body .wrapper {
+    padding: 2em 3em;
+  }
   body .wrapper .icons-contact {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media (min-width: 550px) {
-  body .wrapper {
-    padding: 2em 3em;
   }
 }
 
@@ -516,6 +596,11 @@ footer a:hover {
   }
   body .wrapper header {
     font-size: 1.3em;
+  }
+  body #back-to-top {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
   }
 }
 
