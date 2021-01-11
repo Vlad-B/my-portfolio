@@ -3,18 +3,21 @@ const backToTopButton = document.querySelector('#back-to-top');
 window.addEventListener('scroll', scrollDown);
 
 function scrollDown() {
+	const btnEntrance = backToTopButton.classList.contains('btnEntrance');
+	const btnClass = backToTopButton.classList;
+	const btnStyle = backToTopButton.style;
 	if (window.pageYOffset > 300) {
-		if (!backToTopButton.classList.contains('btnEntrance')) {
-			backToTopButton.classList.remove('btnExit');
-			backToTopButton.classList.add('btnEntrance');
-			backToTopButton.style.display = 'block';
+		if (!btnEntrance) {
+			btnClass.remove('btnExit');
+			btnClass.add('btnEntrance');
+			btnStyle.display = 'block';
 		}
 	} else {
-		if (backToTopButton.classList.contains('btnEntrance')) {
-			backToTopButton.classList.remove('btnEntrance');
-			backToTopButton.classList.add('btnExit');
+		if (btnEntrance) {
+			btnClass.remove('btnEntrance');
+			btnClass.add('btnExit');
 			setTimeout(() => {
-				backToTopButton.style.display = 'none';
+				btnStyle.display = 'none';
 			}, 250);
 		}
 	}
