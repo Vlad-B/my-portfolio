@@ -3,9 +3,9 @@ const backToTopButton = document.querySelector('#back-to-top');
 window.addEventListener('scroll', scrollDown);
 
 function scrollDown() {
-	const btnEntrance = backToTopButton.classList.contains('btnEntrance');
 	const btnClass = backToTopButton.classList;
 	const btnStyle = backToTopButton.style;
+	const btnEntrance = btnClass.contains('btnEntrance');
 	if (window.pageYOffset > 300) {
 		if (!btnEntrance) {
 			btnClass.remove('btnExit');

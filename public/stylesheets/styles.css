@@ -159,7 +159,7 @@ ul {
   content: " ";
   position: absolute;
   height: 5px;
-  width: 90px;
+  width: 100px;
   top: -.2em;
   background: -webkit-gradient(linear, left top, right top, from(red), color-stop(#333), to(rgba(255, 0, 0, 0)));
   background: linear-gradient(to right, red, #333, rgba(255, 0, 0, 0));
@@ -532,9 +532,6 @@ footer {
 @media (min-width: 500px) {
   body {
     font-size: 16px;
-  }
-  body .cover-wrapper header .logo::before {
-    width: 140px;
   }
   body .wrapper {
     padding: 2em 3em;
