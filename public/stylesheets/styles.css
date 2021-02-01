@@ -265,7 +265,7 @@ ul {
   gap: 2em 1.5em;
 }
 
-.items a {
+.items .red-anchor {
   height: 100%;
   font-weight: bold;
   font-size: 1.2em;
@@ -278,7 +278,7 @@ ul {
   text-decoration: none;
 }
 
-.items a:hover {
+.items .red-anchor:hover {
   background-size: 4px 90px;
 }
 
@@ -289,23 +289,24 @@ ul {
       grid-template-columns: repeat(1, 1fr);
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  height: 43em;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 1em .5em 0;
+  padding: 1em .5em;
   border: 10px solid #29233f;
   border-radius: 20px;
 }
 
 .items li .intro {
   width: 95%;
-  height: 30em;
+  height: 100%;
   margin: 1em auto 0;
 }
 
 .items li .intro .projectImage {
   display: block;
-  width: 95%;
+  width: 100%;
+  height: auto;
   margin: 0 auto 2em;
   padding: .5em;
   border: 5px solid rgba(129, 79, 3, 0.719);
@@ -330,7 +331,7 @@ ul {
 
 .items li .icons-home {
   width: 95%;
-  height: 7em;
+  height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
@@ -348,7 +349,7 @@ ul {
 }
 
 .items li .icons-home .github {
-  height: 40px;
+  height: 90%;
 }
 
 .items li .icons-home .github .fab {
@@ -572,8 +573,8 @@ footer {
 
 @media (min-width: 750px) {
   body .items {
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -609,8 +610,8 @@ footer {
 
 @media (min-width: 1300px) {
   body .items {
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
